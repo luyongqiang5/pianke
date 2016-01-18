@@ -10,6 +10,7 @@
 #import "PKLeftHeadView.h"//头部view
 #import "PKLeftTableView.h"//列表选项
 #import "PKLeftMusicView.h"//底部音乐播放器
+#import "PKLandingViewController.h"//登录界面
 @interface PKLeftMenuViewController ()
 
 @property (strong, nonatomic)           PKLeftHeadView *leftheadView;
@@ -52,9 +53,17 @@
 - (PKLeftHeadView *)leftheadView{
     if (!_leftheadView) {
         _leftheadView = [[PKLeftHeadView alloc]init];
+        [_leftheadView.iconImageBtn addTarget:self action:@selector(pushToLandingViewController) forControlEvents:UIControlEventTouchUpInside];
+        [_leftheadView.userNameBtn addTarget:self action:@selector(pushToLandingViewController) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _leftheadView;
 }
+
+- (void) pushToLandingViewController{
+    PKLandingViewController *landing = [[PKLandingViewController alloc]init];
+    [self presentViewController:landing animated:YES completion:nil];//
+}
+
 //中间切换试图的列表
 - (PKLeftTableView *)leftTable{
     if (!_leftTable) {

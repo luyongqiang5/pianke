@@ -95,7 +95,7 @@
     if (!_userNameBtn) {
         _userNameBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [_userNameBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-        [_userNameBtn setTitle:@"登陆｜注册" forState:(UIControlStateNormal)];
+        [_userNameBtn setTitle:@"登录｜注册" forState:(UIControlStateNormal)];
         _userNameBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     }
     return _userNameBtn;

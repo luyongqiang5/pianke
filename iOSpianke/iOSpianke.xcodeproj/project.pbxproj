@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0454E7B01C48D07A007B074D /* PKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454E7AF1C48D07A007B074D /* PKLandingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0454E7B41C48D0DF007B074D /* PKThirdLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454E7B31C48D0DF007B074D /* PKThirdLandingView.m */; settings = {ASSET_TAGS = (); }; };
+		0481210A1C4BACE6008C1C00 /* PKTitleLangdingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048121091C4BACE6008C1C00 /* PKTitleLangdingView.m */; settings = {ASSET_TAGS = (); }; };
+		0481210E1C4BC416008C1C00 /* PKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481210D1C4BC416008C1C00 /* PKRegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		048121121C4BD855008C1C00 /* PKHeadPortraitRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048121111C4BD855008C1C00 /* PKHeadPortraitRegisterView.m */; settings = {ASSET_TAGS = (); }; };
+		048121181C4BE56B008C1C00 /* PKRegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048121171C4BE56B008C1C00 /* PKRegisterContentView.m */; settings = {ASSET_TAGS = (); }; };
+		0493B0A51C48EE2E009C0821 /* PKEmailLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0493B0A41C48EE2E009C0821 /* PKEmailLandingView.m */; settings = {ASSET_TAGS = (); }; };
 		60BB1D961C473118007D8F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D951C473118007D8F51 /* main.m */; };
 		60BB1D991C473118007D8F51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D981C473118007D8F51 /* AppDelegate.m */; };
 		60BB1D9F1C473118007D8F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60BB1D9D1C473118007D8F51 /* Main.storyboard */; };
@@ -123,6 +130,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0454E7AE1C48D07A007B074D /* PKLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLandingViewController.h; path = "登录/PKLandingViewController.h"; sourceTree = "<group>"; };
+		0454E7AF1C48D07A007B074D /* PKLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLandingViewController.m; path = "登录/PKLandingViewController.m"; sourceTree = "<group>"; };
+		0454E7B21C48D0DF007B074D /* PKThirdLandingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKThirdLandingView.h; path = "登录/view/PKThirdLandingView.h"; sourceTree = "<group>"; };
+		0454E7B31C48D0DF007B074D /* PKThirdLandingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKThirdLandingView.m; path = "登录/view/PKThirdLandingView.m"; sourceTree = "<group>"; };
+		048121081C4BACE6008C1C00 /* PKTitleLangdingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKTitleLangdingView.h; path = "登录/view/PKTitleLangdingView.h"; sourceTree = "<group>"; };
+		048121091C4BACE6008C1C00 /* PKTitleLangdingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKTitleLangdingView.m; path = "登录/view/PKTitleLangdingView.m"; sourceTree = "<group>"; };
+		0481210C1C4BC416008C1C00 /* PKRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKRegisterViewController.h; path = "注册/PKRegisterViewController.h"; sourceTree = "<group>"; };
+		0481210D1C4BC416008C1C00 /* PKRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKRegisterViewController.m; path = "注册/PKRegisterViewController.m"; sourceTree = "<group>"; };
+		048121101C4BD855008C1C00 /* PKHeadPortraitRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKHeadPortraitRegisterView.h; path = "注册/view/PKHeadPortraitRegisterView.h"; sourceTree = "<group>"; };
+		048121111C4BD855008C1C00 /* PKHeadPortraitRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKHeadPortraitRegisterView.m; path = "注册/view/PKHeadPortraitRegisterView.m"; sourceTree = "<group>"; };
+		048121161C4BE56B008C1C00 /* PKRegisterContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKRegisterContentView.h; path = "注册/view/PKRegisterContentView.h"; sourceTree = "<group>"; };
+		048121171C4BE56B008C1C00 /* PKRegisterContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKRegisterContentView.m; path = "注册/view/PKRegisterContentView.m"; sourceTree = "<group>"; };
+		0493B0A31C48EE2E009C0821 /* PKEmailLandingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKEmailLandingView.h; path = "登录/view/PKEmailLandingView.h"; sourceTree = "<group>"; };
+		0493B0A41C48EE2E009C0821 /* PKEmailLandingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKEmailLandingView.m; path = "登录/view/PKEmailLandingView.m"; sourceTree = "<group>"; };
 		60BB1D911C473118007D8F51 /* iOSPianKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPianKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BB1D951C473118007D8F51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60BB1D971C473118007D8F51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -351,6 +372,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0454E7AD1C48D02F007B074D /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				0454E7AE1C48D07A007B074D /* PKLandingViewController.h */,
+				0454E7AF1C48D07A007B074D /* PKLandingViewController.m */,
+				0454E7B11C48D08D007B074D /* view */,
+			);
+			name = "登录";
+			sourceTree = "<group>";
+		};
+		0454E7B11C48D08D007B074D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0454E7B21C48D0DF007B074D /* PKThirdLandingView.h */,
+				0454E7B31C48D0DF007B074D /* PKThirdLandingView.m */,
+				0493B0A31C48EE2E009C0821 /* PKEmailLandingView.h */,
+				0493B0A41C48EE2E009C0821 /* PKEmailLandingView.m */,
+				048121081C4BACE6008C1C00 /* PKTitleLangdingView.h */,
+				048121091C4BACE6008C1C00 /* PKTitleLangdingView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		0481210B1C4BC343008C1C00 /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				0481210C1C4BC416008C1C00 /* PKRegisterViewController.h */,
+				0481210D1C4BC416008C1C00 /* PKRegisterViewController.m */,
+				0481210F1C4BC7AC008C1C00 /* view */,
+			);
+			name = "注册";
+			sourceTree = "<group>";
+		};
+		0481210F1C4BC7AC008C1C00 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				048121101C4BD855008C1C00 /* PKHeadPortraitRegisterView.h */,
+				048121111C4BD855008C1C00 /* PKHeadPortraitRegisterView.m */,
+				048121161C4BE56B008C1C00 /* PKRegisterContentView.h */,
+				048121171C4BE56B008C1C00 /* PKRegisterContentView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		60BB1D881C473118007D8F51 = {
 			isa = PBXGroup;
 			children = (
@@ -377,7 +442,9 @@
 				60BB1D971C473118007D8F51 /* AppDelegate.h */,
 				60BB1D981C473118007D8F51 /* AppDelegate.m */,
 				60BB1EE21C4745E8007D8F51 /* PrefixHeader.pch */,
+				0481210B1C4BC343008C1C00 /* 注册 */,
 				60BB1EE71C4775FD007D8F51 /* 首页 */,
+				0454E7AD1C48D02F007B074D /* 登录 */,
 				60BB1EE31C4774E6007D8F51 /* 左侧菜单 */,
 				60BB1EBD1C473685007D8F51 /* 工具类 */,
 				60BB1EB51C4733EF007D8F51 /* 基类 */,
@@ -891,6 +958,7 @@
 				60BB1EB01C4733A9007D8F51 /* UIImage+MultiFormat.m in Sources */,
 				60BB1E8E1C4733A9007D8F51 /* MJRefreshAutoGifFooter.m in Sources */,
 				60BB1ED91C4739A4007D8F51 /* ZJPBaseHttpTool.m in Sources */,
+				0481210E1C4BC416008C1C00 /* PKRegisterViewController.m in Sources */,
 				60BB1E931C4733A9007D8F51 /* MJRefreshBackStateFooter.m in Sources */,
 				60BB1E9F1C4733A9007D8F51 /* UIScrollView+MJExtension.m in Sources */,
 				60BB1E8C1C4733A9007D8F51 /* MJRefreshFooter.m in Sources */,
@@ -898,8 +966,10 @@
 				60BB1E9A1C4733A9007D8F51 /* MJDIYAutoFooter.m in Sources */,
 				60BB1E741C4733A9007D8F51 /* AFURLConnectionOperation.m in Sources */,
 				60BB1E861C4733A9007D8F51 /* NSArray+MASAdditions.m in Sources */,
+				0454E7B41C48D0DF007B074D /* PKThirdLandingView.m in Sources */,
 				60BB1E891C4733A9007D8F51 /* MJRefreshAutoFooter.m in Sources */,
 				60BB1E7A1C4733A9007D8F51 /* UIAlertView+AFNetworking.m in Sources */,
+				0454E7B01C48D07A007B074D /* PKLandingViewController.m in Sources */,
 				60BB1E731C4733A9007D8F51 /* AFSecurityPolicy.m in Sources */,
 				60BB1EAB1C4733A9007D8F51 /* SDWebImageDownloaderOperation.m in Sources */,
 				60BB1EF81C47A3C1007D8F51 /* PKLeftTableViewCell.m in Sources */,
@@ -910,6 +980,7 @@
 				60BB1EA21C4733A9007D8F51 /* RECommonFunctions.m in Sources */,
 				60BB1EE11C473A85007D8F51 /* AFDownloadRequestOperation.m in Sources */,
 				60BB1EB81C473434007D8F51 /* PKBaseViewController.m in Sources */,
+				048121181C4BE56B008C1C00 /* PKRegisterContentView.m in Sources */,
 				60BB1E801C4733A9007D8F51 /* MASCompositeConstraint.m in Sources */,
 				60BB1ECD1C473685007D8F51 /* JPRefreshView.m in Sources */,
 				60BB1E841C4733A9007D8F51 /* MASViewAttribute.m in Sources */,
@@ -917,6 +988,7 @@
 				60BB1EAE1C4733A9007D8F51 /* UIButton+WebCache.m in Sources */,
 				60BB1EB41C4733A9007D8F51 /* UIView+WebCacheOperation.m in Sources */,
 				60BB1EDA1C4739A4007D8F51 /* ZJPNavigationController.m in Sources */,
+				0493B0A51C48EE2E009C0821 /* PKEmailLandingView.m in Sources */,
 				60BB1E8D1C4733A9007D8F51 /* MJRefreshHeader.m in Sources */,
 				60BB1E6F1C4733A9007D8F51 /* AFHTTPRequestOperation.m in Sources */,
 				60BB1E771C4733A9007D8F51 /* AFURLSessionManager.m in Sources */,
@@ -958,6 +1030,7 @@
 				60BB1F041C489619007D8F51 /* PKLeftMusicView.m in Sources */,
 				60BB1E721C4733A9007D8F51 /* AFNetworkReachabilityManager.m in Sources */,
 				60BB1E961C4733A9007D8F51 /* MJRefreshStateHeader.m in Sources */,
+				0481210A1C4BACE6008C1C00 /* PKTitleLangdingView.m in Sources */,
 				60BB1EA91C4733A9007D8F51 /* SDWebImageDecoder.m in Sources */,
 				60BB1ED21C473685007D8F51 /* UIView+Toast.m in Sources */,
 				60BB1EB11C4733A9007D8F51 /* UIImage+WebP.m in Sources */,
@@ -965,6 +1038,7 @@
 				60BB1D961C473118007D8F51 /* main.m in Sources */,
 				60BB1EAC1C4733A9007D8F51 /* SDWebImageManager.m in Sources */,
 				60BB1E791C4733A9007D8F51 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				048121121C4BD855008C1C00 /* PKHeadPortraitRegisterView.m in Sources */,
 				60BB1EEF1C477CBA007D8F51 /* PKLeftHeadView.m in Sources */,
 				60BB1ED01C473685007D8F51 /* UIImage+Helper.m in Sources */,
 				60BB1E951C4733A9007D8F51 /* MJRefreshNormalHeader.m in Sources */,
