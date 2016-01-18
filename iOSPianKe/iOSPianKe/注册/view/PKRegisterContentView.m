@@ -68,7 +68,7 @@
     }];
     //昵称
     [_nicknameLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.mas_top).offset(146);
+        make.top.equalTo(weakSelf.sexManBtn.mas_bottom).offset(50);
         make.height.equalTo(0.5);
         make.left.equalTo(weakSelf.mas_left).offset(40);
         make.right.equalTo(weakSelf.mas_right).offset(-40);
@@ -86,7 +86,7 @@
     }];
     //邮箱
     [_emailLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.nicknameLine.mas_top).offset(55);
+        make.top.equalTo(weakSelf.nicknameLine.mas_top).offset(50);
         make.height.equalTo(0.5);
         make.left.equalTo(weakSelf.mas_left).offset(40);
         make.right.equalTo(weakSelf.mas_right).offset(-40);
@@ -104,7 +104,7 @@
     }];
     //密码
     [_passwordLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.emailLine.mas_top).offset(55);
+        make.top.equalTo(weakSelf.emailLine.mas_top).offset(50);
         make.height.equalTo(0.5);
         make.left.equalTo(weakSelf.mas_left).offset(40);
         make.right.equalTo(weakSelf.mas_right).offset(-40);
@@ -122,14 +122,14 @@
     }];
     //完成
     [_accomplishBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.passwordLine.mas_bottom).offset(42);
-        make.height.equalTo(60);
+        make.top.equalTo(weakSelf.passwordLine.mas_bottom).offset(30);
+        make.height.equalTo(50);
         make.left.equalTo(weakSelf.passwordLine.mas_left);
         make.right.equalTo(weakSelf.passwordLine.mas_right);
     }];
     //说明
     [_treatyLbl mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.accomplishBtn.mas_bottom).offset(68);
+        make.bottom.equalTo(weakSelf.mas_bottom).offset(-10);
         make.size.mas_equalTo(CGSizeMake(256, 16));
         make.left.equalTo(weakSelf.mas_left).offset(40);
     }];
@@ -254,7 +254,7 @@
         _treatyLbl = [[UILabel alloc]init];
         _treatyLbl.textColor = [UIColor blackColor];
         _treatyLbl.textAlignment = NSTextAlignmentLeft;
-        _treatyLbl.font = [UIFont systemFontOfSize:13];
+        _treatyLbl.font = [UIFont systemFontOfSize:11];
         _treatyLbl.text = @"点击“完成“按钮，代表你已阅读并同意";
     }
     return _treatyLbl;
@@ -265,7 +265,7 @@
 //        [_treatyBtn setBackgroundImage:[UIImage imageNamed:@"片刻协议"] forState:(UIControlStateNormal)];
         [_treatyBtn setTitle:@"片刻协议" forState:(UIControlStateNormal)];
         [_treatyBtn setTitleColor:[UIColor greenColor] forState:(UIControlStateNormal)];
-        _treatyBtn.titleLabel.font = [UIFont systemFontOfSize:14.0];
+        _treatyBtn.titleLabel.font = [UIFont systemFontOfSize:11.0];
     }
     return _treatyBtn;
 }

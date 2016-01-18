@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.thirdLanding];
     [self.view addSubview:self.emailLandingView];
     [self.view addSubview:self.titleLangingView];

@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.headPortraotRegisterView];
     [self.view addSubview:self.registerContentView];
     [self addAutoLayout];
@@ -27,7 +28,7 @@
 - (void)addAutoLayout{
     WS(weakSelf);
     [_headPortraotRegisterView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.view.mas_top).offset(20);
+        make.top.equalTo(weakSelf.view.mas_top).offset(30);
         make.left.equalTo(weakSelf.view.mas_left);
         make.right.equalTo(weakSelf.view.mas_right);
         make.height.equalTo(120);
@@ -35,7 +36,7 @@
     
     [_registerContentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(weakSelf.view.mas_bottom);
-        make.height.equalTo(495);
+        make.height.equalTo(weakSelf.view.frame.size.height/3*2);
         make.left.equalTo(weakSelf.view.mas_left);
         make.right.equalTo(weakSelf.view.mas_right);
     }];
@@ -88,25 +89,30 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     WS(weakSelf);
-    if (textField == _registerContentView.nicknameText) {
-        [UIView animateWithDuration:0.3 animations:^{
-            CGRect rect = weakSelf.view.bounds;
-            rect.origin.y = 55;
-            weakSelf.view.bounds = rect;
-        }];
-    }else if (textField == _registerContentView.emailText){
-        [UIView animateWithDuration:0.3 animations:^{
-            CGRect rect = weakSelf.view.bounds;
-            rect.origin.y = 110;
-            weakSelf.view.bounds = rect;
-        }];
-    }else {
-        [UIView animateWithDuration:0.3 animations:^{
-            CGRect rect = weakSelf.view.bounds;
-            rect.origin.y = 165;
-            weakSelf.view.bounds = rect;
-        }];
-    }
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect rect = weakSelf.view.bounds;
+        rect.origin.y = 150;
+        weakSelf.view.bounds = rect;
+    }];
+//    if (textField == _registerContentView.nicknameText) {
+//        [UIView animateWithDuration:0.3 animations:^{
+//            CGRect rect = weakSelf.view.bounds;
+//            rect.origin.y = 50;
+//            weakSelf.view.bounds = rect;
+//        }];
+//    }else if (textField == _registerContentView.emailText){
+//        [UIView animateWithDuration:0.3 animations:^{
+//            CGRect rect = weakSelf.view.bounds;
+//            rect.origin.y = 100;
+//            weakSelf.view.bounds = rect;
+//        }];
+//    }else {
+//        [UIView animateWithDuration:0.3 animations:^{
+//            CGRect rect = weakSelf.view.bounds;
+//            rect.origin.y = 150;
+//            weakSelf.view.bounds = rect;
+//        }];
+//    }
 }
 
 -(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
