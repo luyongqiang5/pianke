@@ -58,6 +58,8 @@
     if (!_headProtraitBtn) {
         _headProtraitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_headProtraitBtn setBackgroundImage:[UIImage imageNamed:@"头像"] forState:(UIControlStateNormal)];
+        [_headProtraitBtn.layer setMasksToBounds:YES];
+        [_headProtraitBtn.layer setCornerRadius:40.0]; //设置矩形四个圆角半径
     }
     return _headProtraitBtn;
 }

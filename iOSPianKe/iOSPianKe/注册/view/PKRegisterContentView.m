@@ -144,6 +144,10 @@
     if (!_sexManBtn) {
         _sexManBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_sexManBtn setBackgroundImage:[UIImage imageNamed:@"男"] forState:(UIControlStateNormal)];
+        _sexManBtn.tag = 100;
+        [_sexManBtn setBackgroundImage:[UIImage imageNamed:@"男_sel"] forState:(UIControlStateSelected)];
+        [_sexManBtn addTarget:self action:@selector(changeSexBtnMethod:) forControlEvents:(UIControlEventTouchUpInside)];
+        _sexManBtn.selected = NO;
     }
     return _sexManBtn;
 }
@@ -151,8 +155,23 @@
     if (!_sexWomanBtn) {
         _sexWomanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_sexWomanBtn setBackgroundImage:[UIImage imageNamed:@"女"] forState:(UIControlStateNormal)];
+        [_sexWomanBtn setBackgroundImage:[UIImage imageNamed:@"女_sel"] forState:(UIControlStateSelected)];
+        _sexWomanBtn.tag = 101;
+        [_sexWomanBtn addTarget:self action:@selector(changeSexBtnMethod:) forControlEvents:(UIControlEventTouchUpInside)];
+        _sexWomanBtn.selected = NO;
     }
     return _sexWomanBtn;
+}
+- (void)changeSexBtnMethod:(UIButton *)sender{
+    if (self.sexManBtn.selected == NO && self.sexWomanBtn.selected == NO) {
+        sender.selected = YES;
+    }else if (sender.tag == 100){
+        sender.selected = YES;
+        _sexWomanBtn.selected = NO;
+    }else if (sender.tag == 101){
+        sender.selected = YES;
+        _sexManBtn.selected = NO;
+    }
 }
 #pragma mark - 昵称
 - (UILabel *) nicknameLbl{
