@@ -78,10 +78,30 @@
         [self.view makeToast:@"密码不能为空" duration:1 position:@"center"];
     }else if ([_registerContentView.emailText.text isEmptyString]){
         [self.view makeToast:@"邮箱不能为空" duration:1 position:@"center"];
-    }else if ([_headPortraotRegisterView.headProtraitBtn isEqual:[UIImage imageNamed:@"上传头像"]]){
+    }else if ([_headPortraotRegisterView.headProtraitBtn isEqual:[UIImage imageNamed:@"头像"]]){
         [self.view makeToast:@"头像不能为空" duration:1 position:@"center"];
     }else{
-        [self upload];
+//        [self upload];
+            WS(weakSelf);
+        //显示动画/////
+            [JPRefreshView showJPRefreshFromView:self.view];
+        [ZJPBaseHttpTool postImagePath:@"http://api2.pianke.me/user/reg" params:[self makeLoginRequestDic] image:_imageFiled
+                               success:^(id JSON) {
+                NSDictionary *returnDic = JSON;
+                //                    移除动画
+                [JPRefreshView removeJPRefreshFromView:self.view];
+                if ([returnDic[@"result"] integerValue] == 1) {
+                    [weakSelf.view makeToast:@"注册成功" duration:1 position:@"center"];
+                }else{
+                    [weakSelf.view makeToast:[returnDic[@"data"] valueForKey:@"msg"] duration:1 position:@"center"];
+                }
+                
+        }
+                               failure:^(NSError *error) {
+                //                    移除动画
+                [JPRefreshView removeJPRefreshFromView:self.view];
+                [weakSelf.view makeToast:@"注册失败" duration:1 position:@"center"];
+            }];
     }
 }
 #pragma mark - 点击头像后的提示框
@@ -118,32 +138,51 @@
     
 }
 
-#pragma 上传照片
-- (void)upload{
+- (NSDictionary *)makeLoginRequestDic{
     NSDictionary *dic = @{@"client":@"1",
                           @"deviceid":@"A55AF7DB-88C8-408D-B983-D0B9C9CA0B36",
-                          @"email":self.registerContentView.emailText.text,
+                          @"email":_registerContentView.emailText.text,
                           @"gender":@"1",
-                          @"passwd":self.registerContentView.passwordText.text,
-                          @"uname":self.registerContentView.nicknameText.text,
+                          @"passwd":_registerContentView.passwordText.text,
+                          @"uname":_registerContentView.nicknameText.text,
                           @"version":@"3.0.6",
                           @"auth":@"",
-                          @"iconfile":@"170286123.png"};
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/x-javascript"];
-    
-    [manager POST:@"http://api2.pianke.me/user/reg" parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        UIImage *postImage = [UIImage imageWithContentsOfFile:_imageFiled];
-        NSData *imageData = UIImageJPEGRepresentation(postImage, 0.1);
-        
-        [formData appendPartWithFileData:imageData name:@"iconfile" fileName:_imageFiled    mimeType:@"image/png"];
-        
-    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"上传成功");
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"上传失败");
-    }];
+                          @"iconfile":_imageFiled};//图片框的地址
+    return dic;
+}
+
+#pragma 上传注册信息
+
+- (void)upload{
+//    NSDictionary *dic = @{@"client":@"1",
+//                          @"deviceid":@"A55AF7DB-88C8-408D-B983-D0B9C9CA0B36",
+//                          @"email":self.registerContentView.emailText.text,
+//                          @"gender":@"1",
+//                          @"passwd":self.registerContentView.passwordText.text,
+//                          @"uname":self.registerContentView.nicknameText.text,
+//                          @"version":@"3.0.6",
+//                          @"auth":@"",
+//                          @"iconfile":self.headPortraotRegisterView.headProtraitBtn};//图片框的地址
+    ////显示动画/////
+//    [JPRefreshView showJPRefreshFromView:self.view];
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/x-javascript"];
+//    
+//    [manager POST:@"http://api2.pianke.me/user/reg" parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+//        UIImage *postImage = [UIImage imageWithContentsOfFile:_imageFiled];
+//        NSData *imageData = UIImageJPEGRepresentation(postImage, 0.1);
+//        
+//        [formData appendPartWithFileData:imageData name:@"iconfile" fileName:_imageFiled    mimeType:@"image/png"];
+//        
+//    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"上传成功");
+//        //移除动画
+//        [JPRefreshView removeJPRefreshFromView:self.view];
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"上传失败");
+//        //移除动画
+//        [JPRefreshView removeJPRefreshFromView:self.view];
+//    }];
 }
 
 #pragma mark UIImagePickerControllerDelegate 代理方法

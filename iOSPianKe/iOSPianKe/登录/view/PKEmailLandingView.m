@@ -16,7 +16,7 @@
 @property (strong, nonatomic)           UILabel     *tostLabel1;
 @property (strong, nonatomic)           UILabel     *tostLabel2;
 
-@property (strong, nonatomic)           UIButton    *landingBtn;
+
 
 @end
 

@@ -60,6 +60,8 @@
         [_titleLangingView.backBtn addTarget:self action:@selector(returnToHomePage) forControlEvents:(UIControlEventTouchUpInside)];
         //注册按钮
         [_titleLangingView.registrationBtn addTarget:self action:@selector(pussToRegisterPage) forControlEvents:(UIControlEventTouchUpInside)];
+        //登录按钮
+        [_emailLandingView.landingBtn addTarget:self action:@selector(loginHttpRequest) forControlEvents:(UIControlEventTouchUpInside)];
     }
 
     return _titleLangingView;
@@ -90,6 +92,44 @@
     }
     return _emailLandingView;
 }
+
+- (void)loginHttpRequest{
+    [_emailLandingView.emailText resignFirstResponder];
+    [_emailLandingView.passwordText resignFirstResponder];
+    if ([_emailLandingView.emailText.text isEmptyString]){
+        [self.view makeToast:@"邮箱不能为空" duration:1 position:@"center"];
+    }else if ([_emailLandingView.passwordText.text isEmptyString]){
+        [self.view makeToast:@"密码不能为空" duration:1 position:@"center"];
+    }else {
+        WS(weakSelf);
+    [JPRefreshView showJPRefreshFromView:self.view];
+        //显示动画/////
+    [ZJPBaseHttpTool postWithPath:@"http://api2.pianke.me/user/login" params:[self makeLoginRequestDic] success:^(id JSON) {
+        NSDictionary *returnDic = JSON;
+        //                    移除动画
+        [JPRefreshView removeJPRefreshFromView:self.view];
+        if ([returnDic[@"result"] integerValue] == 1) {
+            [weakSelf.view makeToast:@"登录成功" duration:1 position:@"center"];
+        }else{
+            [weakSelf.view makeToast:[returnDic[@"data"] valueForKey:@"msg"] duration:1 position:@"center"];
+        }
+    } failure:^(NSError *error) {
+        //                    移除动画
+        [JPRefreshView removeJPRefreshFromView:self.view];
+        [weakSelf.view makeToast:@"登录失败" duration:1 position:@"center"];
+    }];
+    }
+}
+
+- (NSDictionary *)makeLoginRequestDic{
+    NSDictionary *dic = @{@"client":@"1",
+                          @"deviceid":@"A55AF7DB-88C8-408D-B983-D0B9C9CA0B36",
+                          @"email":_emailLandingView.emailText.text,
+                          @"passwd":_emailLandingView.passwordText.text,
+                          @"version":@"3.0.6"};
+    return dic;
+}
+
 #pragma mark - 键盘的弹出与回去
 //记得加代理
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{

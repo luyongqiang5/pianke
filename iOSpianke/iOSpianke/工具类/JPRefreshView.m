@@ -117,8 +117,8 @@
 - (NSArray *)refreshIamgesArray {
     
     NSMutableArray *marr = [NSMutableArray array];
-    for (int i = 0; i <= 14; i++) {
-        NSString *name = [NSString stringWithFormat:@"loading_animate_%i",i];
+    for (int i = 0; i <= 28; i++) {
+        NSString *name = [NSString stringWithFormat:@"refresh%i",i];
         [marr addObject:name];
     }
     NSMutableArray *marrImages = [NSMutableArray array];

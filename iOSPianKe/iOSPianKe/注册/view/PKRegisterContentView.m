@@ -263,6 +263,7 @@
         [_accomplishBtn setTitle:@"完成" forState:(UIControlStateNormal)];
         [_accomplishBtn setBackgroundColor:[UIColor greenColor]];
         [_accomplishBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+        [_accomplishBtn setBackgroundColor:RGB(119, 182, 69)];
     }
     return _accomplishBtn;
 }
@@ -283,7 +284,7 @@
         _treatyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 //        [_treatyBtn setBackgroundImage:[UIImage imageNamed:@"片刻协议"] forState:(UIControlStateNormal)];
         [_treatyBtn setTitle:@"片刻协议" forState:(UIControlStateNormal)];
-        [_treatyBtn setTitleColor:[UIColor greenColor] forState:(UIControlStateNormal)];
+        [_treatyBtn setTitleColor:RGB(119, 182, 69)forState:(UIControlStateNormal)];
         _treatyBtn.titleLabel.font = [UIFont systemFontOfSize:11.0];
     }
     return _treatyBtn;
